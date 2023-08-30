@@ -1,6 +1,6 @@
 import React from "react";
 import { readFile, writeFile } from "../helpers/file-helpers";
-import HitCounter from "./components/HitCounter";
+import HitCounter from "../components/HitCounter";
 
 const DATABASE_PATH = "src/database.json";
 
