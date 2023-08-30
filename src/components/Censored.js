@@ -1,17 +1,19 @@
 "use client";
 import React from "react";
 
-function HitCounter({ hits }) {
+function Censored({ children }) {
   const [isCensored, setIsCensored] = React.useState(false);
 
   return (
     <button
-      onClick={() => setIsCensored(!isCensored)}
       className={isCensored ? "censored" : undefined}
+      onClick={() => {
+        setIsCensored(!isCensored);
+      }}
     >
-      {hits}
+      {children}
     </button>
   );
 }
 
-export default HitCounter;
+export default Censored;
